@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Survey Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1 id="title">Survey Form</h1>
+	<p id="description">Thank you for taking the time to help us improve the platform.</p>
+	<form id="survey-form">
+		<label for="name" id="name-label">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+		<label for="email" id="email-label">Email:</label>
+		<input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+		<label for="number" id="number-label">Age:</label>
+		<input type="number" id="number" name="age" min="18" max="100" placeholder="Enter your age" required>
+
+		<label for="dropdown">Status:</label>
+		<select id="dropdown" name="status" required>
+			<option value="" disabled selected>Select an option</option>
+			<option value="student">Student</option>
+			<option value="employed">Employed</option>
+			<option value="retired">Retired</option>
+		</select>
+
+		<fieldset>
+			<legend id="radio-label">Gender:</legend>
+			<label>
+				<input type="radio" name="gender" value="male" required> Male
+			</label>
+			<label>
+				<input type="radio" name="gender" value="female"> Female
+			</label>
+		</fieldset>
+
+		<fieldset>
+			<legend id="checkbox-label">Which sport have you played?</legend>
+			<label>
+				<input type="checkbox" name="sports" value="football"> Football
+			</label>
+			<label>
+				<input type="checkbox" name="sports" value="bascket_ball"> Basket Ball
+			</label>
+			<label>
+				<input type="checkbox" name="sports" value="tennis"> Tennis
+			</label>
+		</fieldset>
+
+		<label for="comments">Additional comments:</label>
+		<textarea id="comments" name="comments"></textarea>
+
+		<button type="submit" id="submit">Submit</button>
+	</form>
+</body>
+</html>
